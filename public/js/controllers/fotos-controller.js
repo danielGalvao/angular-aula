@@ -1,6 +1,8 @@
-angular.module('alurapic').controller('FotosController',function($scope){
-  $scope.foto = {
-    titulo: 'Leão',
-    url: 'http://i0.wp.com/spacenews.com.br/wp-content/uploads/2015/11/maxresdefault.jpg?fit=2560%2C1600'
-  };
+angular.module('alurapic').controller('FotosController',function($scope, $http){
+  $scope.fotos = [];
+  $http.get('v1/fotos').then(function(resp){
+    $scope.fotos = resp.data;
+  }).catch(function(error){
+    console.log(error);
+  });
 });
