@@ -1,0 +1,6 @@
+.painel-fade.ng-leave-active {
+  -webkit-transform: scale(0.1);
+}
+.painel-fade {
+  -webkit-transition: transform 0.8s;
+}
