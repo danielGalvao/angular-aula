@@ -6,5 +6,6 @@ angular.module('alurapic', ['minhasDiretivas', 'ngAnimate', 'ngRoute'])
     controller: 'FotosController'
   }).when('/fotos/new',{
     templateUrl: 'partials/foto.html',
+    controller: 'FotoController'
   }).otherwise({redirectTo: '/fotos'});
 });
