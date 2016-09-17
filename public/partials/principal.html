@@ -15,6 +15,6 @@
 </div>
 <div class="row">
   <meu-painel class="painel-fade" ng-repeat="foto in fotos | filter: filtro" titulo="{{foto.titulo}}">
-    <img class="img-responsive center-block" src="{{foto.url}}" alt="{{foto.titulo}}">
+    <minha-foto url="{{foto.url}}" titulo="{{foto.titulo}}"></minha-foto>
   </meu-painel>
 </div>
