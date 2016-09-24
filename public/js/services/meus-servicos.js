@@ -17,7 +17,9 @@ return $resource('v1/fotos/:fotoId', null, {
           });
         }, function(erro){
           console.log(erro);
-          reject('Não foi possível alterar a foto '+foto.titulo);
+          reject({
+            mensagem: 'Não foi possível alterar a foto '+foto.titulo
+          });
         });
       }else{
         recursoFoto.save(foto, function(){
@@ -27,7 +29,9 @@ return $resource('v1/fotos/:fotoId', null, {
           });
         }, function(erro){
           console.log(erro);
-          reject('Não foi possível inserir a foto '+foto.titulo);
+          reject({
+            mensagem: 'Não foi possível inserir a foto '+foto.titulo
+          });
         })
       }
     });
